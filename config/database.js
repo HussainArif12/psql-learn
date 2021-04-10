@@ -1,7 +1,7 @@
 const { Pool } = require("pg");
-const connectionString =
-  "postgres://laeqdhvt:NrU-3HvJFaFe0ONHDveAd051RycEOuc-@queenie.db.elephantsql.com:5432/laeqdhvt";
-
+require("dotenv").config();
+const connectionString = process.env.PSQL_CONNECTION;
+console.log(process.env);
 const pool = new Pool({
   connectionString,
 });
